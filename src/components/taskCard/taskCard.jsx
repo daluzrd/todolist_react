@@ -1,24 +1,39 @@
 import React, { Component } from "react";
+import ConfirmModal from "../confirmModal/";
 import "../../assets/taskCard/style.css";
 
 class TaskCard extends Component {
-
-    _handleDelete(event){
-        event.preventDefault();
-        event.stopPropagation();
+	    
+    _handleDelete() {
+        const modal = document.querySelectorAll(".confirm-modal")[this.props.id];
+        modal.style.display = "block";
+        const card = document.querySelectorAll(".card-content")[this.props.id];
+        card.style.display = "none";
+	}
+    
+    handleDelete(id){
+        this.props.handleDelete(id);
     }
 
-    render() {
-        return (
-            <section className="card-task-card">
-                <button className="task-card-delete">x</button>
-                <h3 className="title-task-card">{this.props.task.title}</h3>
-                <p className="description-task-card">
-                    {this.props.task.description}
-                </p>
-            </section>
-        );
-    }
+	render() {
+		return (
+			<section className="card-task-card">
+                <ConfirmModal id={this.props.id} handleDelete={this.handleDelete.bind(this)}></ConfirmModal>
+                <section className="card-content">
+				    <button
+					    className="task-card-delete"
+					    onClick={() => {
+						    this._handleDelete(this.props.id);
+					    }}
+				    >
+					x
+				    </button>
+				    <h3 className="title-task-card">{this.props.task.title}</h3>
+				    <p className="description-task-card">{this.props.task.description}</p>
+                </section>
+			</section>
+		);
+	}
 }
 
 export default TaskCard;
