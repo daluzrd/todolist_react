@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import RegisterForm from "./components/registerForm/";
+import TaskList from "./components/taskList/";
+import "./assets/App/style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      taskList: []
+    }
+  }
+
+  handleSubmit(task){
+    const newTaskList = this.state.taskList;
+    newTaskList.push(task);    
+    this.setState({
+      taskList: newTaskList
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <RegisterForm className="register-form" 
+        handleSubmit={this.handleSubmit.bind(this)}></RegisterForm>
+        <TaskList className="task-list"
+        taskList={this.state.taskList}></TaskList>
+      </div>
+    );
+  }
 }
 
 export default App;
