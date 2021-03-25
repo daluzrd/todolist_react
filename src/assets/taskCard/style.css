@@ -8,26 +8,18 @@
 }
 
 .task-card-delete{
-    text-decoration: none;
-    color: #282828;
     align-self: flex-end;
     font-size: 1.3rem;
-    border: none;
     background-color: #FDFDFD;
+    font-weight: normal;
+    padding: 0;
 }
 
 .task-card-delete:hover{
     color: #FF2040;
 }
 
-.title-task-card{
-    font-size: 1.5rem;
-    font-weight: bold;
-    overflow-wrap: break-word;
-}
-
 .description-task-card{
     margin-top: 1rem;
     max-height: 7rem;
-    overflow-wrap: break-word;
 }

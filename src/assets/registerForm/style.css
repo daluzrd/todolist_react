@@ -24,23 +24,11 @@
     background-color: #FDFDFD;
 }
 
-.form-register-descricao>textarea{
-    font-family: "Roboto", sans-serif;
-    border: none;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
-}
-
 .form-register-button{
-    border: none;
     background-color: #3500D3;
     color: #FDFDFD;
-    font-weight: bold;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
 }
 
 .form-register-button:hover{
-    transition: 400ms;
     transform: scale(1.1);    
 }

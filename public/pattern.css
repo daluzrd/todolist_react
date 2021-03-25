@@ -3,3 +3,28 @@ body{
     background-color: #282828;
     color: #FDFDFD;
 }
+
+textarea{
+    font-family: "Roboto", sans-serif;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+button{
+    border: none;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    transition: 400ms;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+p{
+    overflow-wrap: break-word;
+}

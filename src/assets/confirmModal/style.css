@@ -1,17 +1,15 @@
 .confirm-modal{
     display: none;
-    background-color: #FDFDFD;
-    color: #282828;
     border-radius: 0.3rem;
 }
 
 .close-button-modal{
-    text-decoration: none;
-    color: #282828;
     float: right;
     font-size: 1.3rem;
     border: none;
     background-color: #FDFDFD;
+    font-weight: normal;
+    padding: 0;
 }
 
 
@@ -20,15 +18,12 @@
 }
 
 .title-confirm-modal{
-    font-size: 1.5rem;
-    font-weight: bold;
     clear: both;
     color: #FF2040;
 }
 
 .description-confirm-modal{
     margin-top: 1rem;
-    overflow-wrap: break-word;
 }
 
 .buttons-confirm-modal{
