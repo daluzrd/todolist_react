@@ -17,6 +17,7 @@ button{
     border-radius: 0.2rem;
     padding: 0.5rem;
     transition: 400ms;
+    cursor: pointer;
 }
 
 h3{

@@ -3,10 +3,6 @@ import TaskCard from "../taskCard/";
 import "../../assets/taskList/style.css";
 
 class TaskList extends Component {
-	handleDelete(id) {
-		this.props.handleDelete(id);
-	}
-
 	render() {
 		return (
 			<section>
@@ -18,7 +14,7 @@ class TaskList extends Component {
 									className="task-card"
 									task={task}
 									id={index}
-									handleDelete={this.handleDelete.bind(this)}
+									handleDelete={this.props.handleDelete.bind(this)}
 								></TaskCard>
 							</li>
 						);

@@ -3,22 +3,8 @@
     border-radius: 0.3rem;
 }
 
-.close-button-modal{
-    float: right;
-    font-size: 1.3rem;
-    border: none;
-    background-color: #FDFDFD;
-    font-weight: normal;
-    padding: 0;
-}
-
-
-.close-button-modal:hover{
-    color: #FF2040;
-}
-
 .title-confirm-modal{
-    clear: both;
+    margin-top: 1.8rem;
     color: #FF2040;
 }
 
