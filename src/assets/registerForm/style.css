@@ -39,3 +39,8 @@
     border-radius: 0.2rem;
     padding: 0.5rem;
 }
+
+.form-register-button:hover{
+    transition: 400ms;
+    transform: scale(1.1);    
+}
