@@ -17,8 +17,7 @@ class App extends Component {
   }
 
   handleSubmit(task){
-    const newTaskList = this.state.taskList;
-    newTaskList.push(task);    
+    const newTaskList = [...this.state.taskList, task];
     localStorage.setItem("tasks", JSON.stringify(newTaskList));
     this.setState({
       taskList: newTaskList
