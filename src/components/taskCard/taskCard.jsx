@@ -28,7 +28,6 @@ class TaskCard extends Component {
 						onClick={() => {
 							this._handleDelete(this.props.id);
 						}}
-						src={deleteSVG}
 					/>
 					<h3 className="title-task-card">{this.props.task.title}</h3>
 					<p className="description-task-card">{this.props.task.description}</p>
