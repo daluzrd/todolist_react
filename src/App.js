@@ -1,25 +1,41 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import RegisterForm from "./components/registerForm/";
 import TaskList from "./components/taskList/";
-import Tasks from "./data/Tasks.js";
+import DataTasks from "./data/Tasks.js";
 import "./assets/App/style.css";
 
-class App extends Component {
-  constructor(){
-    super();
-    this.tasks = new Tasks();
-  }
+function App() {
+	const dataTasks = new DataTasks();
+	const [taskList, setTaskList] = useState(dataTasks.getTasksOnStorage());
 
-  render() {
-    return (
-      <div className="App">
-        <RegisterForm className="register-form" 
-        handleSubmit={this.tasks.handleSubmit.bind(this.tasks)}></RegisterForm>
-        <TaskList className="task-list"
-        tasks={this.tasks}></TaskList>
-      </div>
-    );
-  }
+	function handleSubmit(task) {
+		setTaskList([...taskList, task]);
+	}
+
+	function handleDelete(id) {
+		debugger;
+		const newTaskList = taskList.slice();
+		newTaskList.splice(id, 1);
+		setTaskList(newTaskList);
+	}
+
+	useEffect(() => {
+		dataTasks.saveTasksOnStorage(taskList);
+	}, [taskList]); //eslint-disable-line
+
+	return (
+		<div className="App">
+			<RegisterForm
+				className="register-form"
+				handleSubmit={handleSubmit}
+			></RegisterForm>
+			<TaskList
+				className="task-list"
+				taskList={taskList}
+				handleDelete={handleDelete}
+			></TaskList>
+		</div>
+	);
 }
 
 export default App;
