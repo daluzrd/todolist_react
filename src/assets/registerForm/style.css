@@ -1,34 +1,40 @@
-.form-register-form{
-    width: calc(100% - 5rem);
-    padding-right: 2rem;
-    font-weight: bold;
+.form-register-form {
+	width: calc(100% - 5rem);
+	padding-right: 2rem;
+	font-weight: bold;
 }
 
-.form-register-titulo, .form-register-descricao{
-    display: flex;
-    flex-direction:column;
-    margin-bottom: 1rem;
+.form-register-titulo,
+.form-register-descricao,
+.form-register-categoria {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
 }
 
-.form-register-titulo>label, .form-register-descricao>label{
-    margin-bottom: 0.5rem;
+.form-register-categoria > label,
+.form-register-titulo > label,
+.form-register-descricao > label {
+	margin-bottom: 0.5rem;
 }
 
-.form-register-titulo>input{
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.2rem;
+.form-register-categoria > select,
+.form-register-titulo > input {
+	padding: 0.5rem;
+	border: none;
+	border-radius: 0.2rem;
 }
 
-.form-register-titulo>input, .form-register-descricao>textarea{
-    background-color: #FDFDFD;
+.form-register-titulo > input,
+.form-register-descricao > textarea {
+	background-color: #fdfdfd;
 }
 
-.form-register-button{
-    background-color: #3500D3;
-    color: #FDFDFD;
+.form-register-button {
+	background-color: #3500d3;
+	color: #fdfdfd;
 }
 
-.form-register-button:hover{
-    transform: scale(1.1);    
+.form-register-button:hover {
+	transform: scale(1.1);
 }

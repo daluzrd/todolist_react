@@ -22,6 +22,12 @@ function RegisterForm({ handleSubmit }) {
 					setIsSubmitted(true);
 				}}
 			>
+				<section className="form-register-categoria">
+					<label>Categoria</label>
+					<select>
+						<option>Categoria 1</option>
+					</select>
+				</section>
 				<section className="form-register-titulo">
 					<label>Título</label>
 					<input

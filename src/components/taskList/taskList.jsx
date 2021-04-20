@@ -8,14 +8,12 @@ function TaskList({ taskList, handleDelete }) {
 			<ul className="list-task-list">
 				{taskList.map((task, index) => {
 					return (
-						<li key={index} className="item-task-list">
-							<TaskCard
-								className="task-card"
-								task={task}
-								id={index}
-								handleDelete={handleDelete}
-							></TaskCard>
-						</li>
+						<TaskCard
+							className="task-card"
+							task={task}
+							id={index}
+							handleDelete={handleDelete}
+						></TaskCard>
 					);
 				})}
 			</ul>

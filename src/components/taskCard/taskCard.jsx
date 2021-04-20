@@ -12,24 +12,26 @@ function TaskCard({ handleDelete, id, task }) {
 	}
 
 	return (
-		<section className="card-task-card">
-			<ConfirmModal
-				id={id}
-				handleDelete={() => {
-					handleDelete(id);
-				}}
-			></ConfirmModal>
-			<section className="card-content">
-				<DeleteSVG
-					className="task-card-delete"
-					onClick={() => {
-						_handleDelete(id);
+		<li key={id} className="item-task-list">
+			<section className="card-task-card">
+				<ConfirmModal
+					id={id}
+					handleDelete={() => {
+						handleDelete(id);
 					}}
-				/>
-				<h3 className="title-task-card">{task.title}</h3>
-				<p className="description-task-card">{task.description}</p>
+				></ConfirmModal>
+				<section className="card-content">
+					<DeleteSVG
+						className="task-card-delete"
+						onClick={() => {
+							_handleDelete(id);
+						}}
+					/>
+					<h3 className="title-task-card">{task.title}</h3>
+					<p className="description-task-card">{task.description}</p>
+				</section>
 			</section>
-		</section>
+		</li>
 	);
 }
 

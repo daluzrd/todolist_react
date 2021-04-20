@@ -1,0 +1,13 @@
+.list-category-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list-category-item {
+	width: 20%;
+	height: 70vh;
+	background-color: #acacac;
+	margin: 0.5rem;
+	color: #282828;
+	border-radius: 0.3rem;
+}

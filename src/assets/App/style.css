@@ -1,13 +1,13 @@
-.App{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    padding: 2rem;
+.App {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	padding: 2rem;
 }
 
-.register-form{
-    grid-column: 1 / 1;
+.register-form {
+	grid-column: 1 / 1;
 }
 
-.task-list{
-    grid-column: 2 / 2;
+.category-list {
+	grid-column: 2 / 2;
 }
